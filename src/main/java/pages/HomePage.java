@@ -25,7 +25,7 @@ public class HomePage extends Page {
     }
 
     public SignInPage actionButtonSignIn() throws AWTException {
-        Robot rb=new Robot();
+        Robot rb = new Robot();
         rb.keyPress(KeyEvent.VK_ESCAPE);
         WaitUtils.waitForElementForWebElem(dropDowListSignIn, 5);
         actionClick(dropDowListSignIn);

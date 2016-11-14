@@ -11,12 +11,12 @@ import java.net.URL;
 
 public class WebDriwerSetUp {
 
-        public static DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
+        public static DesiredCapabilities desiredCapabilities = DesiredCapabilities.firefox();
 
         public static WebDriver createDriver(boolean isProxy) {
             setCapabilities(isProxy);
             try {
-                return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), desiredCapabilities);
+                return new RemoteWebDriver(new URL("http://localhost:4445/wd/hub"), desiredCapabilities);
             } catch (MalformedURLException e) {
                 throw new RuntimeException("Driver cannot be created!");
             }

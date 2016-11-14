@@ -16,7 +16,7 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp(Method method) {
-        System.setProperty("webdriver.chrome.driver", "Z:/Downloads/ChromeDriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Denys\\Desktop\\chromedriver_win32\\chromedriver.exe");
         homePage = new HomePage(WebDriwerSetUp.createDriver(method.isAnnotationPresent(Proxy.class)));
         Page.getDriver().manage().window().maximize();
     }
